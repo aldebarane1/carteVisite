@@ -85,12 +85,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Business',
+            label: 'Compétences',
             backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'School',
+            label: 'Formation',
             backgroundColor: Colors.blueAccent,
           ),
           BottomNavigationBarItem(
