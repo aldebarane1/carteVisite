@@ -43,28 +43,37 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    CircleAvatar(
+      radius: 70.0,
+      backgroundImage: AssetImage('assets/photoCV.png'),
+    ),
     Text(
-      'Index 0: Présentation',
+      'Présentation',
       style: TextStyle(
+          wordSpacing: 6,
+          letterSpacing: 2,
           fontSize: 30,
           fontWeight: FontWeight.w900,
-          height: 1.5,
+          height: 24,
           color: Colors.black),
     ),
     Text(
-      textAlign : TextAlign.end,
-      'Index 1: Compétences',
-
-      style: TextStyle(fontFamily: 'DancingScript', fontSize: 30, height: 4),
+      'Compétences',
+      style: TextStyle(fontFamily: 'DancingScript', fontSize: 30, height: 27),
     ),
-    Text(
-      'Index 2: Formation-Blablablablabla',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: CV',
-      style: optionStyle,
-    ),
+    Card(
+        color: Colors.blueAccent,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Adlan',
+            style: TextStyle(
+                fontFamily: 'DancingScript.ttf',
+                fontSize: 30,
+                height: 1.5,
+                color: Colors.white),
+          ),
+        )),
   ];
 
   void _onItemTapped(int index) {
@@ -77,7 +86,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: const Text('Adlan AISSAOUI'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
