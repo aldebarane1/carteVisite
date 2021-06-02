@@ -45,14 +45,20 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Présentation',
-      style: optionStyle,
+      style: TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.w900,
+          height: 1.5,
+          color: Colors.black),
     ),
     Text(
+      textAlign : TextAlign.end,
       'Index 1: Compétences',
-      style: optionStyle,
+
+      style: TextStyle(fontFamily: 'DancingScript', fontSize: 30, height: 4),
     ),
     Text(
-      'Index 2: Formations',
+      'Index 2: Formation-Blablablablabla',
       style: optionStyle,
     ),
     Text(
@@ -80,27 +86,27 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.orangeAccent,
+            label: 'Qui suis-je! ',
+            backgroundColor: Colors.blueAccent,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Compétences',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.deepOrange,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'Formation',
-            backgroundColor: Colors.blueAccent,
+            backgroundColor: Colors.purpleAccent,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.black12,
+            label: 'CV',
+            backgroundColor: Colors.black26,
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.black,
         onTap: _onItemTapped,
       ),
     );
