@@ -43,9 +43,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    CircleAvatar(
-      radius: 70.0,
-      backgroundImage: AssetImage('assets/photoCV.png'),
+    Card(
+      child: Padding(
+        padding: EdgeInsets.all(18.0),
+        child: CircleAvatar(
+          radius: 70.0,
+          backgroundImage: AssetImage('assets/photoCV.png'),
+        ),
+      ),
     ),
     Text(
       'Présentation',
