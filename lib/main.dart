@@ -45,11 +45,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     Card(
       child: Padding(
-        padding: EdgeInsets.all(18.0),
+        padding: EdgeInsets.all(38.0),
         child: CircleAvatar(
-          radius: 70.0,
-          backgroundImage: AssetImage('assets/photoCV.png'),
-        ),
+            radius: 90.0,
+            backgroundImage: AssetImage('assets/photoCV.png'),
+            child: Text(
+              'Adlan AISSAOUI',
+              style: TextStyle(
+                height: 11,
+                color: Colors.black,
+                fontWeight: FontWeight.w900,
+                fontSize: 20,
+              ),
+            )),
       ),
     ),
     Text(
@@ -93,8 +101,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       appBar: AppBar(
         title: const Text('Adlan AISSAOUI'),
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: Column(
+        children: [
+          Card(
+            child: Text(
+              'Adlan AISSAOUI',
+              style: TextStyle(
+                height: 1,
+                color: Colors.black,
+                fontWeight: FontWeight.w900,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          Center(
+            child: _widgetOptions.elementAt(_selectedIndex),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
