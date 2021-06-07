@@ -45,30 +45,34 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const List<Widget> _widgetOptions = <Widget>[
     Card(
       child: Padding(
-        padding: EdgeInsets.all(38.0),
+        padding: EdgeInsets.all(8.0),
         child: CircleAvatar(
-            radius: 90.0,
-            backgroundImage: AssetImage('assets/photoCV.png'),
-            child: Text(
-              'Adlan AISSAOUI',
-              style: TextStyle(
-                height: 11,
-                color: Colors.black,
-                fontWeight: FontWeight.w900,
-                fontSize: 20,
-              ),
-            )),
+          radius: 90.0,
+          backgroundImage: AssetImage('assets/photoCV.png'),
+          child: Text(
+            'Adlan AISSAOUI',
+            style: TextStyle(
+              height: 11,
+              color: Colors.black,
+              fontWeight: FontWeight.w900,
+              fontSize: 20,
+            ),
+          ),
+        ),
       ),
     ),
-    Text(
-      'Présentation',
-      style: TextStyle(
-          wordSpacing: 6,
-          letterSpacing: 2,
-          fontSize: 30,
-          fontWeight: FontWeight.w900,
-          height: 24,
-          color: Colors.black),
+    Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Text(
+        'Présentation',
+        style: TextStyle(
+            wordSpacing: 6,
+            letterSpacing: 12,
+            fontSize: 30,
+            fontWeight: FontWeight.w900,
+            height: 24,
+            color: Colors.black),
+      ),
     ),
     Text(
       'Compétences',
@@ -99,25 +103,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Adlan AISSAOUI'),
+        title: const Text('Carte de Visite d\'Adlan AISSAOUI'),
       ),
-      body: Column(
-        children: [
-          Card(
-            child: Text(
-              'Adlan AISSAOUI',
-              style: TextStyle(
-                height: 1,
-                color: Colors.black,
-                fontWeight: FontWeight.w900,
-                fontSize: 20,
-              ),
-            ),
-          ),
-          Center(
-            child: _widgetOptions.elementAt(_selectedIndex),
-          ),
-        ],
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -139,7 +128,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'CV',
-            backgroundColor: Colors.black26,
+            backgroundColor: Colors.pink,
           ),
         ],
         currentIndex: _selectedIndex,
