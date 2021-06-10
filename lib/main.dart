@@ -57,12 +57,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         Text(
           'Adlan AISSAOUI',
           style: TextStyle(
-            height: 5,
+            height: 3,
             color: Colors.black,
             fontWeight: FontWeight.w900,
             fontSize: 40,
           ),
         ),
+        Card(
+          child: Text('Technicien chimiste 10 ans'),
+        ),
+        Text('Analyste Développeur Junior')
       ],
     ),
     Padding(
