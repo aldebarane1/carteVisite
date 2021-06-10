@@ -42,24 +42,28 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Card(
-      child: Padding(
-        padding: EdgeInsets.all(8.0),
-        child: CircleAvatar(
-          radius: 90.0,
-          backgroundImage: AssetImage('assets/photoCV.png'),
-          child: Text(
-            'Adlan AISSAOUI',
-            style: TextStyle(
-              height: 11,
-              color: Colors.black,
-              fontWeight: FontWeight.w900,
-              fontSize: 20,
+  static List<Widget> _widgetOptions = <Widget>[
+    Column(
+      children: [
+        Card(
+          child: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              radius: 90.0,
+              backgroundImage: AssetImage('assets/photoCV.png'),
             ),
           ),
         ),
-      ),
+        Text(
+          'Adlan AISSAOUI',
+          style: TextStyle(
+            height: 5,
+            color: Colors.black,
+            fontWeight: FontWeight.w900,
+            fontSize: 40,
+          ),
+        ),
+      ],
     ),
     Padding(
       padding: EdgeInsets.all(8.0),
